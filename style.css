@@ -457,7 +457,7 @@ nav a:hover { color: var(--green); }
       transparent 76%, rgba(255,255,255,.10) 77%, rgba(255,255,255,.10) 78%, transparent 79%
     ),
     /* Blue canton */
-    linear-gradient(#0044DD, #0044DD) 0 0 / 27% 38% no-repeat,
+    linear-gradient(#0044DD, #0044DD) 0 0 / 33% 46% no-repeat,
     /* Red & white stripes */
     repeating-linear-gradient(
       to bottom,
@@ -472,9 +472,9 @@ nav a:hover { color: var(--green); }
 .flag-stars {
   position: absolute;
   top: -1%;
-  left: -10%;
-  width: 24%;
-  height: 36%;
+  left: -12%;
+  width: 30%;
+  height: 44%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
