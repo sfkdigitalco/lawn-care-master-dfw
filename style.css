@@ -644,7 +644,29 @@ footer a:hover { color: #fff; }
 
   .contact-grid { grid-template-columns: 1fr; }
   .work-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
-  .footer-logo { width: 160px; padding: 10px 16px; }
+
+  footer {
+    background: var(--blue) !important;
+  }
+
+  .footer-inner {
+    padding: 20px 16px;
+    background: var(--blue);
+  }
+
+  .footer-logo {
+    width: 110px;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+  }
+
+  footer p {
+    font-size: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 4px;
+  }
 
   #hero {
     padding: 90px 24px 60px;
