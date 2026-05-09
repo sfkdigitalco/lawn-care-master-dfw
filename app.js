@@ -1,7 +1,10 @@
-// Intro animation
+// Intro animation — lock scroll and cover full screen regardless of scroll position
 const introScreen = document.getElementById('intro-screen');
 const introText   = document.getElementById('intro-text');
 const introLogo   = document.getElementById('intro-logo');
+
+document.body.style.overflow = 'hidden';
+window.scrollTo(0, 0);
 
 setTimeout(() => {
   introText.style.opacity = '0';
@@ -9,7 +12,10 @@ setTimeout(() => {
     introLogo.style.opacity = '1';
     setTimeout(() => {
       introScreen.classList.add('hidden');
-      setTimeout(() => introScreen.remove(), 700);
+      setTimeout(() => {
+        introScreen.remove();
+        document.body.style.overflow = '';
+      }, 700);
     }, 900);
   }, 500);
 }, 1000);

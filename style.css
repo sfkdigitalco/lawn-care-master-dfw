@@ -21,12 +21,15 @@
 /* ===== INTRO SCREEN ===== */
 #intro-screen {
   position: fixed;
-  inset: 0;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
+  z-index: 99999;
   transition: opacity .6s ease;
 }
 
@@ -535,13 +538,22 @@ nav a:hover { color: var(--green); }
 .call-text-options.open { display: block; }
 
 .call-text-options a {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   padding: 14px 20px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--text);
   border-bottom: 1px solid #f0f0f0;
   transition: background .15s;
+}
+
+.call-text-options a svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--green2);
 }
 
 .call-text-options a:last-child { border-bottom: none; }
@@ -645,27 +657,23 @@ footer a:hover { color: #fff; }
   .contact-grid { grid-template-columns: 1fr; }
   .work-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
 
-  footer {
-    background: var(--blue) !important;
-  }
+  footer { background: var(--blue) !important; }
 
-  .footer-inner {
-    padding: 20px 16px;
-    background: var(--blue);
-  }
+  .footer-inner { padding: 16px 12px; background: var(--blue); }
 
   .footer-logo {
-    width: 110px;
-    padding: 8px 12px;
-    margin-bottom: 12px;
+    width: 90px !important;
+    padding: 6px 10px !important;
+    margin-bottom: 10px;
   }
 
   footer p {
-    font-size: 10px;
+    font-size: 9.5px !important;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
+    color: rgba(255,255,255,.75);
   }
 
   #hero {
