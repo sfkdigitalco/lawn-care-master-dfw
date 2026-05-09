@@ -438,10 +438,15 @@ nav a:hover { color: var(--green); }
 /* ===== QUOTE BOX ===== */
 .quote-box {
   border-radius: 16px;
-  padding: 48px 40px;
+  padding: 72px 40px;
   text-align: center;
   position: relative;
   overflow: hidden;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* American flag — diagonal */
@@ -452,20 +457,41 @@ nav a:hover { color: var(--green); }
   background:
     /* Wrinkle folds */
     linear-gradient(80deg,
-      transparent 20%, rgba(255,255,255,.12) 21%, rgba(255,255,255,.12) 22%, transparent 23%,
-      transparent 52%, rgba(0,0,0,.10) 53%, rgba(0,0,0,.10) 54%, transparent 55%,
-      transparent 76%, rgba(255,255,255,.09) 77%, rgba(255,255,255,.09) 78%, transparent 79%
+      transparent 20%, rgba(255,255,255,.15) 21%, rgba(255,255,255,.15) 22%, transparent 23%,
+      transparent 52%, rgba(0,0,0,.12) 53%, rgba(0,0,0,.12) 54%, transparent 55%,
+      transparent 76%, rgba(255,255,255,.10) 77%, rgba(255,255,255,.10) 78%, transparent 79%
     ),
     /* Blue canton */
-    linear-gradient(#002868, #002868) 0 0 / 40% 50% no-repeat,
+    linear-gradient(#0044DD, #0044DD) 0 0 / 40% 50% no-repeat,
     /* Red & white stripes */
     repeating-linear-gradient(
       to bottom,
-      #B22234 0%, #B22234 7.692%,
+      #EE0000 0%, #EE0000 7.692%,
       #fff    7.692%, #fff 15.384%
     );
   transform: rotate(-14deg);
   z-index: 0;
+}
+
+/* Stars in the canton */
+.flag-stars {
+  position: absolute;
+  top: -8%;
+  left: -18%;
+  width: 44%;
+  height: 60%;
+  color: #fff;
+  font-size: 11px;
+  line-height: 2.1;
+  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: rotate(-14deg);
+  z-index: 3;
+  pointer-events: none;
+  text-shadow: 0 0 4px rgba(255,255,255,.6);
 }
 
 /* Dark overlay for text readability */
