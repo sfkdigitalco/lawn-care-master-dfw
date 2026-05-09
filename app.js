@@ -9,25 +9,24 @@ function closeMenu() {
   mobileMenu.classList.remove('open');
 }
 
-async function handleSubmit(e) {
+function handleSubmit(e) {
   e.preventDefault();
   const form = e.target;
-  const data = new FormData(form);
+  const name = form.name.value;
+  const phone = form.phone.value;
+  const email = form.email.value;
+  const message = form.message.value;
 
-  try {
-    const res = await fetch(form.action, {
-      method: 'POST',
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    });
+  const subject = encodeURIComponent('Quote Request from ' + name);
+  const body = encodeURIComponent(
+    'Name: ' + name + '\n' +
+    'Phone: ' + phone + '\n' +
+    'Email: ' + email + '\n\n' +
+    'Message:\n' + message
+  );
 
-    if (res.ok) {
-      document.getElementById('form-success').style.display = 'block';
-      form.reset();
-    } else {
-      alert('Something went wrong. Please call or text us directly at (817) 996-1103.');
-    }
-  } catch {
-    alert('Something went wrong. Please call or text us directly at (817) 996-1103.');
-  }
+  window.location.href = 'mailto:lawncaremasterdfw@gmail.com?subject=' + subject + '&body=' + body;
+
+  document.getElementById('form-success').style.display = 'block';
+  form.reset();
 }

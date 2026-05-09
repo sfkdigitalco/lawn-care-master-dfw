@@ -389,6 +389,8 @@ nav a:hover { color: var(--green); }
 
 .social-btn.facebook { background: #1877f2; }
 
+.social-btn.whatsapp { background: #25d366; }
+
 /* ===== CONTACT FORM ===== */
 .contact-form {
   background: var(--gray);
