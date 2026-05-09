@@ -381,13 +381,13 @@ nav a:hover { color: var(--green); }
 .work-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
+  gap: 40px;
 }
 
 .work-item {
   border-radius: 14px;
   overflow: hidden;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
   position: relative;
   box-shadow: 0 8px 32px rgba(0,0,0,.35);
 }
@@ -644,6 +644,7 @@ footer a:hover { color: #fff; }
 
   .contact-grid { grid-template-columns: 1fr; }
   .work-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .footer-logo { width: 160px; padding: 10px 16px; }
 
   #hero {
     padding: 90px 24px 60px;
