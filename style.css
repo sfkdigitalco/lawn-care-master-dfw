@@ -370,29 +370,59 @@ nav a:hover { color: var(--green); }
 .texas-badge { width: 200px; height: 200px; }
 
 /* ===== OUR WORK ===== */
-#our-work { background: var(--gray); }
+#our-work {
+  background: linear-gradient(135deg, #1e6b10 0%, #2d8a18 50%, #1a5c0a 100%);
+}
+
+#our-work .section-header h2 { color: #fff; }
+#our-work .section-header p  { color: rgba(255,255,255,.85); }
+#our-work .label-tag { background: rgba(255,255,255,.2); }
 
 .work-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  gap: 20px;
 }
 
 .work-item {
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
   aspect-ratio: 4 / 3;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0,0,0,.35);
 }
 
 .work-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform .4s ease;
   display: block;
+  transition: transform .5s ease;
+  filter: brightness(1.08) contrast(1.12) saturate(1.18);
 }
 
-.work-item:hover img { transform: scale(1.05); }
+.work-item:hover img { transform: scale(1.07); }
+
+.work-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.65) 0%, transparent 50%);
+  display: flex;
+  align-items: flex-end;
+  padding: 18px 20px;
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.work-item:hover .work-overlay { opacity: 1; }
+
+.work-overlay span {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  text-shadow: 0 1px 4px rgba(0,0,0,.5);
+}
 
 /* ===== CONTACT ===== */
 #contact { background: #fff; }
@@ -478,39 +508,6 @@ nav a:hover { color: var(--green); }
   z-index: 0;
 }
 
-/* Stars in the canton */
-.flag-stars {
-  position: absolute;
-  top: 0%;
-  left: -11%;
-  width: 28%;
-  height: 42%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: stretch;
-  transform: rotate(-14deg);
-  z-index: 3;
-  pointer-events: none;
-  padding: 4px;
-}
-
-.sr {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex: 1;
-}
-
-.sr5 { padding: 0 5px; }
-
-.sr span {
-  color: #fff;
-  font-size: 14px;
-  line-height: 1;
-  text-shadow: 0 0 4px rgba(255,255,255,.6);
-  display: block;
-}
 
 /* Dark overlay for text readability */
 .quote-box::after {
