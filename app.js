@@ -25,6 +25,18 @@ function closeMenu() {
   mobileMenu.classList.remove('open');
 }
 
+function toggleCallText() {
+  const opts = document.getElementById('callTextOptions');
+  opts.classList.toggle('open');
+}
+
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.call-text-wrap')) {
+    const opts = document.getElementById('callTextOptions');
+    if (opts) opts.classList.remove('open');
+  }
+});
+
 function handleSubmit(e) {
   e.preventDefault();
   const form = e.target;

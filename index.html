@@ -154,10 +154,15 @@
         </div>
         <div class="quote-box">
           <h3>Get a Quote Today</h3>
-          <p>Ready for a cleaner, greener yard? We serve the entire DFW Metroplex and offer fast, free quotes with no hassle. Just reach out and we'll take care of the rest.</p>
           <div class="quote-btns">
             <a href="mailto:lawncaremasterdfw@gmail.com" class="btn btn-gray">Email Us</a>
-            <a href="tel:8179961103" class="btn btn-green">Call / Text</a>
+            <div class="call-text-wrap">
+              <button class="btn btn-green" onclick="toggleCallText()">Call / Text &#9660;</button>
+              <div class="call-text-options" id="callTextOptions">
+                <a href="tel:8179961103">&#128222; Call</a>
+                <a href="sms:8179961103">&#128172; Text</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
