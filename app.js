@@ -9,8 +9,25 @@ function closeMenu() {
   mobileMenu.classList.remove('open');
 }
 
-function handleSubmit(e) {
+async function handleSubmit(e) {
   e.preventDefault();
-  document.getElementById('form-success').style.display = 'block';
-  e.target.reset();
+  const form = e.target;
+  const data = new FormData(form);
+
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (res.ok) {
+      document.getElementById('form-success').style.display = 'block';
+      form.reset();
+    } else {
+      alert('Something went wrong. Please call or text us directly at (817) 996-1103.');
+    }
+  } catch {
+    alert('Something went wrong. Please call or text us directly at (817) 996-1103.');
+  }
 }
