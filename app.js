@@ -1,3 +1,19 @@
+// Intro animation
+const introScreen = document.getElementById('intro-screen');
+const introText   = document.getElementById('intro-text');
+const introLogo   = document.getElementById('intro-logo');
+
+setTimeout(() => {
+  introText.style.opacity = '0';
+  setTimeout(() => {
+    introLogo.style.opacity = '1';
+    setTimeout(() => {
+      introScreen.classList.add('hidden');
+      setTimeout(() => introScreen.remove(), 700);
+    }, 900);
+  }, 500);
+}, 1000);
+
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 
