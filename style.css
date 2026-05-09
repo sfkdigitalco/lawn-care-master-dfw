@@ -670,7 +670,13 @@ footer a:hover { color: #fff; }
   .contact-grid { grid-template-columns: 1fr; }
   .work-grid { grid-template-columns: 1fr; }
 
-  #hero { padding: 100px 24px 80px; }
+  #hero {
+    padding: 90px 24px 60px;
+    min-height: 100dvh;
+    background:
+      linear-gradient(to bottom, #fff 42%, transparent 65%),
+      linear-gradient(to right, var(--blue) 0%, #ffffff 28%, #ffffff 72%, var(--red) 100%);
+  }
   section { padding: 60px 0; }
 
   .services-grid { grid-template-columns: 1fr; }
