@@ -227,7 +227,14 @@ nav a:hover { color: var(--green); }
 /* ===== HERO ===== */
 #hero {
   min-height: 100vh;
-  background: #ffffff;
+  background: linear-gradient(to bottom,
+    var(--blue) 0%,
+    var(--blue) 15%,
+    #ffffff 42%,
+    #ffffff 58%,
+    var(--red) 85%,
+    var(--red) 100%
+  );
   position: relative;
   display: flex;
   align-items: center;
@@ -243,6 +250,10 @@ nav a:hover { color: var(--green); }
   max-width: 680px;
   margin: 0 auto;
   text-align: center;
+  background: rgba(255,255,255,.88);
+  border-radius: 20px;
+  padding: 40px 36px;
+  backdrop-filter: blur(4px);
 }
 
 /* ===== HERO LOGO ===== */
