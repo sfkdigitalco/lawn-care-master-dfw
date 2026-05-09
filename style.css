@@ -227,7 +227,7 @@ nav a:hover { color: var(--green); }
 /* ===== HERO ===== */
 #hero {
   min-height: 100vh;
-  background: linear-gradient(to bottom,
+  background: linear-gradient(to right,
     var(--blue) 0%,
     var(--blue) 15%,
     #ffffff 42%,
