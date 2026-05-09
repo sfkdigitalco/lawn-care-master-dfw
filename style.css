@@ -549,11 +549,10 @@ nav a:hover { color: var(--green); }
   transition: background .15s;
 }
 
-.call-text-options a svg {
-  width: 16px;
-  height: 16px;
+.ct-icon {
+  width: 18px;
+  height: 18px;
   flex-shrink: 0;
-  color: var(--green2);
 }
 
 .call-text-options a:last-child { border-bottom: none; }

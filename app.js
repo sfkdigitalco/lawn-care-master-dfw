@@ -1,10 +1,13 @@
-// Intro animation — lock scroll and cover full screen regardless of scroll position
+// Intro animation
 const introScreen = document.getElementById('intro-screen');
 const introText   = document.getElementById('intro-text');
 const introLogo   = document.getElementById('intro-logo');
 
+// Prevent browser restoring scroll position and lock all scrolling
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+document.documentElement.style.overflow = 'hidden';
 document.body.style.overflow = 'hidden';
-window.scrollTo(0, 0);
+window.scrollTo({ top: 0, behavior: 'instant' });
 
 setTimeout(() => {
   introText.style.opacity = '0';
@@ -14,6 +17,7 @@ setTimeout(() => {
       introScreen.classList.add('hidden');
       setTimeout(() => {
         introScreen.remove();
+        document.documentElement.style.overflow = '';
         document.body.style.overflow = '';
       }, 700);
     }, 900);
