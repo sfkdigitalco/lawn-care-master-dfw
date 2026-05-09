@@ -457,7 +457,7 @@ nav a:hover { color: var(--green); }
       transparent 76%, rgba(255,255,255,.10) 77%, rgba(255,255,255,.10) 78%, transparent 79%
     ),
     /* Blue canton */
-    linear-gradient(#0044DD, #0044DD) 0 0 / 40% 58% no-repeat,
+    linear-gradient(#0044DD, #0044DD) 0 0 / 27% 38% no-repeat,
     /* Red & white stripes */
     repeating-linear-gradient(
       to bottom,
@@ -471,10 +471,10 @@ nav a:hover { color: var(--green); }
 /* Stars in the canton */
 .flag-stars {
   position: absolute;
-  top: -2%;
-  left: -14%;
-  width: 38%;
-  height: 56%;
+  top: -1%;
+  left: -10%;
+  width: 24%;
+  height: 36%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -482,7 +482,7 @@ nav a:hover { color: var(--green); }
   transform: rotate(-14deg);
   z-index: 3;
   pointer-events: none;
-  padding: 6px 4px;
+  padding: 4px;
 }
 
 .sr {
@@ -492,13 +492,13 @@ nav a:hover { color: var(--green); }
   flex: 1;
 }
 
-.sr5 { padding: 0 6px; }
+.sr5 { padding: 0 5px; }
 
 .sr span {
   color: #fff;
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1;
-  text-shadow: 0 0 3px rgba(255,255,255,.5);
+  text-shadow: 0 0 4px rgba(255,255,255,.6);
   display: block;
 }
 
