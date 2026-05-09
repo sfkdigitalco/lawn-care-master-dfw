@@ -444,37 +444,38 @@ nav a:hover { color: var(--green); }
   justify-content: center;
 }
 
-/* American flag — diagonal */
+/* American flag — diagonal with curved canton */
 .quote-box::before {
   content: '';
   position: absolute;
   inset: -60%;
   background:
-    /* Wrinkle folds */
-    linear-gradient(80deg,
-      transparent 20%, rgba(255,255,255,.15) 21%, rgba(255,255,255,.15) 22%, transparent 23%,
-      transparent 52%, rgba(0,0,0,.12) 53%, rgba(0,0,0,.12) 54%, transparent 55%,
-      transparent 76%, rgba(255,255,255,.10) 77%, rgba(255,255,255,.10) 78%, transparent 79%
+    /* Wave/wrinkle shading */
+    linear-gradient(72deg,
+      transparent 16%, rgba(255,255,255,.16) 17%, rgba(255,255,255,.16) 19%, transparent 20%,
+      transparent 44%, rgba(0,0,0,.13) 45%, rgba(0,0,0,.13) 47%, transparent 48%,
+      transparent 70%, rgba(255,255,255,.11) 71%, rgba(255,255,255,.11) 73%, transparent 74%,
+      transparent 88%, rgba(0,0,0,.08) 89%, rgba(0,0,0,.08) 90%, transparent 91%
     ),
-    /* Blue canton */
-    linear-gradient(#0044DD, #0044DD) 0 0 / 33% 46% no-repeat,
-    /* Red & white stripes */
+    /* Canton — rounded right edge like a real waving flag */
+    radial-gradient(ellipse 108% 118% at 0% 0%, #002FA7 56%, transparent 56%),
+    /* Slightly angled stripes */
     repeating-linear-gradient(
-      to bottom,
-      #EE0000 0%, #EE0000 7.692%,
-      #fff    7.692%, #fff 15.384%
+      174deg,
+      #E80000 0%, #E80000 7.692%,
+      #ffffff 7.692%, #ffffff 15.384%
     );
-  transform: rotate(-14deg);
+  transform: rotate(-12deg);
   z-index: 0;
 }
 
 /* Stars in the canton */
 .flag-stars {
   position: absolute;
-  top: -1%;
-  left: -12%;
-  width: 30%;
-  height: 44%;
+  top: 0%;
+  left: -11%;
+  width: 28%;
+  height: 42%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
