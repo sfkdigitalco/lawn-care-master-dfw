@@ -449,7 +449,10 @@ nav a:hover { color: var(--green); }
   margin-right: auto;
 }
 
-.quote-box .btn { font-size: 16px; padding: 16px 36px; }
+.quote-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.quote-btns .btn { font-size: 16px; padding: 16px 32px; }
+
+.social-btn.whatsapp { background: #25d366; }
 
 /* ===== CONTACT FORM ===== */
 .contact-form {
