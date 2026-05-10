@@ -37,7 +37,9 @@
   font-family: 'Dancing Script', cursive;
   font-size: clamp(40px, 10vw, 80px);
   font-weight: 700;
-  color: var(--blue);
+  color: #fff;
+  -webkit-text-stroke: 2px #000;
+  paint-order: stroke fill;
   position: absolute;
   opacity: 1;
   transition: opacity .5s ease;
