@@ -699,4 +699,16 @@ footer a:hover { color: #fff; }
 @media (max-width: 480px) {
   .why-grid { grid-template-columns: 1fr; }
   .hero-buttons { flex-direction: column; align-items: center; }
+
+  .call-text-options {
+    width: 140px;
+  }
+
+  .call-text-options a {
+    padding: 10px 12px;
+    font-size: 13px;
+    gap: 8px;
+  }
+
+  .ct-icon { width: 14px; height: 14px; }
 }
