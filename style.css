@@ -287,7 +287,6 @@ nav a:hover { color: var(--green); }
   text-align: center;
 }
 
-.mob-br { display: none; }
 
 .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
@@ -690,13 +689,10 @@ footer a:hover { color: #fff; }
   }
 
   .hero-sub {
+    font-size: 14px;
     font-weight: 800;
     color: #000;
-    text-align: center;
-    width: 100%;
   }
-
-  .mob-br { display: inline; }
 
   .quote-box::before {
     background: url('download.png?v=2') center / cover no-repeat !important;
