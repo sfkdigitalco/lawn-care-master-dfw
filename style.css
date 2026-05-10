@@ -707,7 +707,17 @@ footer a:hover { color: #fff; }
 }
 
 @media (max-width: 480px) {
-  .why-grid { grid-template-columns: 1fr 1fr; }
+  .why-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+
+  .why-card {
+    padding: 14px 10px;
+    aspect-ratio: 1 / 1;
+    justify-content: center;
+  }
+
+  .why-icon { width: 32px; height: 32px; margin-bottom: 10px; }
+  .why-card h4 { font-size: 12px; margin-bottom: 6px; }
+  .why-card p { font-size: 10.5px; }
   .hero-buttons { flex-direction: column; align-items: center; }
 
   .call-text-options {
