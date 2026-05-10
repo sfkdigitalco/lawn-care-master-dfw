@@ -707,7 +707,7 @@ footer a:hover { color: #fff; }
 }
 
 @media (max-width: 480px) {
-  .why-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr 1fr; }
   .hero-buttons { flex-direction: column; align-items: center; }
 
   .call-text-options {
