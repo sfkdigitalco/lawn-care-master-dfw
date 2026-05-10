@@ -690,8 +690,9 @@ footer a:hover { color: #fff; }
 
   .hero-sub {
     font-size: 14px;
-    font-weight: 800;
+    font-weight: 900;
     color: #000;
+    -webkit-text-stroke: 0.3px #000;
   }
 
   .quote-box::before {
