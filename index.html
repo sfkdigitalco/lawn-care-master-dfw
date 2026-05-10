@@ -8,8 +8,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script>if ('scrollRestoration' in history) history.scrollRestoration = 'manual';</script>
 </head>
-<body>
+<body style="overflow:hidden">
 
   <!-- ===== INTRO SCREEN ===== -->
   <div id="intro-screen">
@@ -182,8 +183,8 @@
             <div class="call-text-wrap">
               <button class="btn btn-green" onclick="toggleCallText()">Call / Text &#9660;</button>
               <div class="call-text-options" id="callTextOptions">
-                <a href="tel:8179961103">&#128222; Call</a>
-                <a href="sms:8179961103">&#128172; Text</a>
+                <a href="tel:8179961103"><span class="em">&#128222;</span> Call</a>
+                <a href="sms:8179961103"><span class="em">&#128172;</span> Text</a>
               </div>
             </div>
           </div>
