@@ -284,7 +284,10 @@ nav a:hover { color: var(--green); }
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
+
+.mob-br { display: none; }
 
 .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
@@ -689,7 +692,11 @@ footer a:hover { color: #fff; }
   .hero-sub {
     font-weight: 800;
     color: #000;
+    text-align: center;
+    width: 100%;
   }
+
+  .mob-br { display: inline; }
 
   .quote-box::before {
     background: url('download.png?v=2') center / cover no-repeat !important;
