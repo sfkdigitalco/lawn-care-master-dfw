@@ -284,8 +284,6 @@ nav a:hover { color: var(--green); }
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
-  -webkit-text-stroke: 1.5px #fff;
-  paint-order: stroke fill;
 }
 
 .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
@@ -686,6 +684,11 @@ footer a:hover { color: #fff; }
 
   #our-work {
     background: linear-gradient(135deg, #1e6b10 0%, #2d8a18 50%, #1a5c0a 100%) !important;
+  }
+
+  .hero-sub {
+    -webkit-text-stroke: 1.5px #fff;
+    paint-order: stroke fill;
   }
 
   .quote-box::before {
